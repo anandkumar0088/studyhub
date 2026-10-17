@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Search & Discover Educational Resources — StudyHub</title>
+  <meta name="description" content="Filter and search verified textbooks, chapter notes, previous-year question papers, and syllabus documents for Classes 1-12, CBSE, NEET, JEE, CUET, and UPSC.">
+  <link rel="canonical" href="https://studyhub.local/search.html">
+
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://studyhub.local/search.html">
+  <meta property="og:title" content="Search & Discover Educational Resources — StudyHub">
+  <meta property="og:description" content="Filter and discover verified textbooks, notes, and previous year papers.">
+  <meta property="og:image" content="./assets/og-image.png">
+
+  <link rel="icon" type="image/svg+xml" href="./favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/icons/favicon-32x32.png">
+  <link rel="apple-touch-icon" href="./assets/icons/apple-touch-icon.png">
+  <link rel="manifest" href="./site.webmanifest">
+  <meta name="theme-color" content="#0f2942">
+
+  <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body>
+  <a href="#mainContent" class="skip-link">Skip to main content</a>
+
+  <!-- Header -->
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <a href="./index.html" class="brand-logo-link" aria-label="StudyHub Homepage">
+        <img src="./assets/icons/logo.svg" alt="StudyHub" class="brand-logo-svg" width="160" height="40">
+      </a>
+
+      <!-- Desktop Navigation -->
+      <nav class="nav-desktop" aria-label="Main Navigation">
+        <a href="./classes.html" class="nav-link">Browse Classes</a>
+        <a href="./exams.html" class="nav-link">Competitive Exams</a>
+        <a href="./subjects.html" class="nav-link">Subjects</a>
+        <a href="./papers.html" class="nav-link">Question Papers</a>
+        <a href="./articles/index.html" class="nav-link">Articles</a>
+        <a href="./planner.html" class="nav-link">Study Tools</a>
+        <a href="./about.html" class="nav-link">About</a>
+      </nav>
+
+      <!-- Header Action Buttons -->
+      <div class="header-actions">
+        <a href="./saved.html" class="icon-action-btn" aria-label="View Saved Bookmarks" title="Saved Resources">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path></svg>
+          <span class="icon-action-badge bookmark-count-badge" style="display: none;">0</span>
+        </a>
+
+        <button type="button" class="icon-action-btn theme-toggle-btn" aria-label="Toggle Theme" title="Toggle theme">
+          <span class="theme-icon-container">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+          </span>
+        </button>
+
+        <button type="button" class="mobile-menu-btn" aria-label="Open navigation menu">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Overlay & Menu -->
+  <div class="mobile-drawer-overlay"></div>
+  <aside class="mobile-drawer" aria-label="Mobile Navigation Drawer">
+    <div class="drawer-header">
+      <img src="./assets/icons/logo.svg" alt="StudyHub" width="130" height="32">
+      <button type="button" class="drawer-close-btn icon-action-btn" aria-label="Close navigation menu">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+      </button>
+    </div>
+    <div class="drawer-nav-list">
+      <a href="./index.html" class="drawer-link">Home</a>
+      <a href="./search.html" class="drawer-link active">Discovery Search</a>
+      <a href="./classes.html" class="drawer-link">Classes (1–12)</a>
+      <a href="./exams.html" class="drawer-link">Competitive Exams</a>
+      <a href="./subjects.html" class="drawer-link">Subjects Directory</a>
+      <a href="./papers.html" class="drawer-link">Question Papers</a>
+      <a href="./articles/index.html" class="drawer-link">Articles & Guides</a>
+      <a href="./planner.html" class="drawer-link">Study Planner</a>
+      <a href="./revision.html" class="drawer-link">Revision Checklist</a>
+      <a href="./timer.html" class="drawer-link">Focus Timer</a>
+      <a href="./saved.html" class="drawer-link">Saved Resources</a>
+      <a href="./about.html" class="drawer-link">About StudyHub</a>
+      <a href="./contact.html" class="drawer-link">Contact</a>
+    </div>
+  </aside>
+
+  <!-- Breadcrumbs -->
+  <div class="breadcrumbs-bar">
+    <div class="container">
+      <nav aria-label="Breadcrumb">
+        <ol class="breadcrumb-list">
+          <li class="breadcrumb-item"><a href="./index.html">Home</a></li>
+          <li class="breadcrumb-item" aria-current="page"><span>Search & Resource Discovery</span></li>
+        </ol>
+      </nav>
+    </div>
+  </div>
+
+  <!-- Main Content -->
+  <main id="mainContent" class="main-content" style="padding-top: 2rem; padding-bottom: 4rem;">
+    <div class="container">
+      <!-- Search Input Header -->
+      <div style="margin-bottom: 2rem;">
+        <h1 style="font-size: 2rem; font-weight: 700; margin-bottom: 0.5rem; letter-spacing: -0.02em;">
+          Resource Discovery Engine
+        </h1>
+        <p style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 1.5rem;">
+          Searching the curated StudyHub verified repository of official textbooks, question papers, and syllabi.
+        </p>
+
+        <form id="searchPageForm" class="global-search-form" role="search" onsubmit="return false;">
+          <div class="search-input-wrapper">
+            <svg class="search-icon-left" viewBox="0 0 20 20" fill="currentColor">
+              <path fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clip-rule="evenodd"/>
+            </svg>
+            <input 
+              type="text" 
+              id="searchInput" 
+              class="search-input-main" 
+              placeholder="Search by subject, topic, exam, class, or source (e.g., Class 10 Science, NEET, JEE)..."
+              autocomplete="off"
+              aria-label="Search study material"
+            >
+            <button type="button" class="search-clear-btn" aria-label="Clear search input">&times;</button>
+            <button type="submit" id="searchSubmitBtn" class="search-submit-btn">Search</button>
+          </div>
+          <div class="search-suggestions-dropdown" role="listbox"></div>
+        </form>
+      </div>
+
+      <!-- Main Catalog Layout: Sidebar Filters + Results -->
+      <div class="catalog-layout">
+        <!-- Sidebar Filters -->
+        <aside class="catalog-sidebar" aria-label="Catalog Filters">
+          <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 1rem;">
+            <h2 style="font-size: 1rem; font-weight: 700; color: var(--text-main);">Filter Resources</h2>
+            <button type="button" id="resetAllFiltersBtn" class="filter-reset-btn">Reset All</button>
+          </div>
+
+          <!-- Class Filter -->
+          <div class="filter-group">
+            <div class="filter-title">Classes</div>
+            <div id="filterClassesContainer" style="max-height: 180px; overflow-y: auto; padding-right: 4px;">
+              <!-- Populated by JS -->
+            </div>
+          </div>
+
+          <!-- Competitive Exam Filter -->
+          <div class="filter-group">
+            <div class="filter-title">Examinations</div>
+            <div id="filterExamsContainer" style="max-height: 180px; overflow-y: auto; padding-right: 4px;">
+              <!-- Populated by JS -->
+            </div>
+          </div>
+
+          <!-- Subject Filter -->
+          <div class="filter-group">
+            <div class="filter-title">Subjects</div>
+            <div id="filterSubjectsContainer" style="max-height: 200px; overflow-y: auto; padding-right: 4px;">
+              <!-- Populated by JS -->
+            </div>
+          </div>
+
+          <!-- Resource Type Filter -->
+          <div class="filter-group">
+            <div class="filter-title">Resource Type</div>
+            <div id="filterTypesContainer">
+              <!-- Populated by JS -->
+            </div>
+          </div>
+
+          <!-- Board / Publisher Filter -->
+          <div class="filter-group">
+            <div class="filter-title">Board / Authority</div>
+            <div id="filterBoardsContainer">
+              <!-- Populated by JS -->
+            </div>
+          </div>
+
+          <!-- Language Filter -->
+          <div class="filter-group">
+            <div class="filter-title">Language</div>
+            <div id="filterLanguagesContainer">
+              <!-- Populated by JS -->
+            </div>
+          </div>
+        </aside>
+
+        <!-- Catalog Results Area -->
+        <section aria-label="Search Results">
+          <!-- Controls Bar -->
+          <div class="catalog-controls-bar">
+            <div class="results-count-text">
+              Showing <span id="resultsCount" class="results-count-number">0</span> resources
+            </div>
+
+            <div style="display: flex; align-items: center; gap: 0.5rem;">
+              <label for="sortSelect" style="font-size: 0.875rem; color: var(--text-muted);">Sort by:</label>
+              <select id="sortSelect" class="catalog-sort-select">
+                <option value="relevance">Relevance</option>
+                <option value="newest">Newly Verified</option>
+                <option value="title-asc">Title (A &rarr; Z)</option>
+                <option value="title-desc">Title (Z &rarr; A)</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Active Filter Chips -->
+          <div id="activeFiltersRow" class="active-filters-row" style="display: none;"></div>
+
+          <!-- Resource Cards List Container -->
+          <div id="searchResultsList" class="resources-list" aria-live="polite">
+            <div class="empty-state-card">
+              <p>Loading educational catalog...</p>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-bottom-bar">
+        <div>&copy; <span id="currentYear">2026</span> StudyHub. Dedicated to open, accessible learning.</div>
+        <div><a href="./disclaimer.html" class="footer-link">Legal Disclaimer</a> • <a href="./contact.html" class="footer-link">Report Broken Link</a></div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="./assets/js/storage.js"></script>
+  <script src="./assets/js/catalog.js"></script>
+  <script src="./assets/js/search.js"></script>
+  <script src="./assets/js/ui.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', async () => {
+      document.getElementById('currentYear').textContent = new Date().getFullYear();
+      await StudyHubCatalog.init();
+
+      const allResources = StudyHubCatalog.getAll();
+
+      // State
+      let state = StudyHubSearch.parseUrlParams();
+
+      // DOM Elements
+      const searchInput = document.getElementById('searchInput');
+      const sortSelect = document.getElementById('sortSelect');
+      const resultsContainer = document.getElementById('searchResultsList');
+      const resultsCountEl = document.getElementById('resultsCount');
+      const activeFiltersRow = document.getElementById('activeFiltersRow');
+      const resetBtn = document.getElementById('resetAllFiltersBtn');
+
+      // Populate filter option lists
+      function populateFilterOptions() {
+        // Classes
+        const classesContainer = document.getElementById('filterClassesContainer');
+        const classes = [12, 11, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1];
+        classesContainer.innerHTML = classes.map(c => `
+          <label class="filter-checkbox-item">
+            <input type="checkbox" name="class" value="${c}" ${state.classes.includes(String(c)) ? 'checked' : ''}>
+            <span>Class ${c}</span>
+          </label>
+        `).join('');
+
+        // Exams
+        const examsContainer = document.getElementById('filterExamsContainer');
+        const examList = ['CBSE', 'NEET', 'JEE Main', 'JEE Advanced', 'CUET', 'UPSC', 'SSC', 'Railway', 'Banking', 'ICSE'];
+        examsContainer.innerHTML = examList.map(e => `
+          <label class="filter-checkbox-item">
+            <input type="checkbox" name="exam" value="${e}" ${state.exams.some(se => se.toLowerCase() === e.toLowerCase()) ? 'checked' : ''}>
+            <span>${e}</span>
+          </label>
+        `).join('');
+
+        // Subjects
+        const subjectsContainer = document.getElementById('filterSubjectsContainer');
+        const subjectList = ['Mathematics', 'Science', 'Physics', 'Chemistry', 'Biology', 'Social Science', 'History', 'Geography', 'Political Science', 'Economics', 'English', 'Hindi', 'Computer Science'];
+        subjectsContainer.innerHTML = subjectList.map(s => `
+          <label class="filter-checkbox-item">
+            <input type="checkbox" name="subject" value="${s}" ${state.subjects.some(ss => ss.toLowerCase() === s.toLowerCase()) ? 'checked' : ''}>
+            <span>${s}</span>
+          </label>
+        `).join('');
+
+        // Resource Types
+        const typesContainer = document.getElementById('filterTypesContainer');
+        const typeList = ['Textbook', 'Sample Paper', 'Question Paper', 'Syllabus', 'Exemplar', 'Notes', 'Lab Manual'];
+        typesContainer.innerHTML = typeList.map(t => `
+          <label class="filter-checkbox-item">
+            <input type="checkbox" name="type" value="${t}" ${state.resourceTypes.some(st => st.toLowerCase() === t.toLowerCase()) ? 'checked' : ''}>
+            <span>${t}</span>
+          </label>
+        `).join('');
+
+        // Boards
+        const boardsContainer = document.getElementById('filterBoardsContainer');
+        const boardList = ['CBSE', 'NCERT', 'NTA', 'UPSC', 'ICSE'];
+        boardsContainer.innerHTML = boardList.map(b => `
+          <label class="filter-checkbox-item">
+            <input type="checkbox" name="board" value="${b}" ${state.boards.some(sb => sb.toLowerCase() === b.toLowerCase()) ? 'checked' : ''}>
+            <span>${b}</span>
+          </label>
+        `).join('');
+
+        // Languages
+        const langContainer = document.getElementById('filterLanguagesContainer');
+        const langList = ['English', 'Hindi', 'Bilingual'];
+        langContainer.innerHTML = langList.map(l => `
+          <label class="filter-checkbox-item">
+            <input type="checkbox" name="lang" value="${l}" ${state.languages.some(sl => sl.toLowerCase() === l.toLowerCase()) ? 'checked' : ''}>
+            <span>${l}</span>
+          </label>
+        `).join('');
+      }
+
+      function executeSearch() {
+        const results = StudyHubSearch.search(allResources, state.q, {
+          classes: state.classes,
+          exams: state.exams,
+          subjects: state.subjects,
+          resourceTypes: state.resourceTypes,
+          boards: state.boards,
+          languages: state.languages
+        }, state.sort);
+
+        resultsCountEl.textContent = results.length;
+
+        // Render Active Filter Chips
+        renderActiveChips();
+
+        if (results.length === 0) {
+          resultsContainer.innerHTML = `
+            <div class="empty-state-card">
+              <div class="empty-state-title">No matching resources found</div>
+              <p class="empty-state-text">
+                We could not find any verified resources matching "${escapeHtml(state.q)}" with the active filters.
+                Try adjusting your search terms or clearing some filters.
+              </p>
+              <button type="button" id="clearSearchStateBtn" class="open-resource-btn" style="margin: 0 auto;">
+                Clear Search & Filters
+              </button>
+            </div>
+          `;
+          const clearBtn = document.getElementById('clearSearchStateBtn');
+          if (clearBtn) {
+            clearBtn.addEventListener('click', resetAll);
+          }
+          return;
+        }
+
+        resultsContainer.innerHTML = '';
+        results.forEach(r => {
+          resultsContainer.appendChild(StudyHubUI.renderResourceCard(r));
+        });
+      }
+
+      function renderActiveChips() {
+        const chips = [];
+        if (state.q) {
+          chips.push({ key: 'q', label: `Search: "${state.q}"`, clear: () => { state.q = ''; searchInput.value = ''; } });
+        }
+        state.classes.forEach(c => chips.push({ key: 'class', label: `Class ${c}`, clear: () => { state.classes = state.classes.filter(x => x !== c); uncheckInput('class', c); } }));
+        state.exams.forEach(e => chips.push({ key: 'exam', label: e, clear: () => { state.exams = state.exams.filter(x => x !== e); uncheckInput('exam', e); } }));
+        state.subjects.forEach(s => chips.push({ key: 'subject', label: s, clear: () => { state.subjects = state.subjects.filter(x => x !== s); uncheckInput('subject', s); } }));
+        state.resourceTypes.forEach(t => chips.push({ key: 'type', label: t, clear: () => { state.resourceTypes = state.resourceTypes.filter(x => x !== t); uncheckInput('type', t); } }));
+        state.boards.forEach(b => chips.push({ key: 'board', label: b, clear: () => { state.boards = state.boards.filter(x => x !== b); uncheckInput('board', b); } }));
+        state.languages.forEach(l => chips.push({ key: 'lang', label: l, clear: () => { state.languages = state.languages.filter(x => x !== l); uncheckInput('lang', l); } }));
+
+        if (chips.length > 0) {
+          activeFiltersRow.style.display = 'flex';
+          activeFiltersRow.innerHTML = chips.map((chip, idx) => `
+            <span class="filter-chip">
+              <span>${escapeHtml(chip.label)}</span>
+              <button type="button" data-chip-idx="${idx}" aria-label="Remove filter">&times;</button>
+            </span>
+          `).join('');
+
+          activeFiltersRow.querySelectorAll('button').forEach(btn => {
+            btn.addEventListener('click', () => {
+              const idx = parseInt(btn.getAttribute('data-chip-idx'), 10);
+              chips[idx].clear();
+              StudyHubSearch.syncUrlParams(state);
+              executeSearch();
+            });
+          });
+        } else {
+          activeFiltersRow.style.display = 'none';
+          activeFiltersRow.innerHTML = '';
+        }
+      }
+
+      function uncheckInput(name, value) {
+        const input = document.querySelector(`input[name="${name}"][value="${value}"]`);
+        if (input) input.checked = false;
+      }
+
+      function resetAll() {
+        state = {
+          q: '',
+          classes: [],
+          exams: [],
+          subjects: [],
+          resourceTypes: [],
+          boards: [],
+          languages: [],
+          sort: 'relevance'
+        };
+        searchInput.value = '';
+        sortSelect.value = 'relevance';
+        document.querySelectorAll('.catalog-sidebar input[type="checkbox"]').forEach(cb => cb.checked = false);
+        StudyHubSearch.syncUrlParams(state);
+        executeSearch();
+      }
+
+      // Initialize UI controls
+      searchInput.value = state.q || '';
+      sortSelect.value = state.sort || 'relevance';
+
+      populateFilterOptions();
+
+      // Listen for filter checkbox changes
+      document.querySelector('.catalog-sidebar').addEventListener('change', (e) => {
+        if (e.target && e.target.type === 'checkbox') {
+          const name = e.target.name;
+          const checkedValues = Array.from(document.querySelectorAll(`input[name="${name}"]:checked`)).map(cb => cb.value);
+
+          if (name === 'class') state.classes = checkedValues;
+          else if (name === 'exam') state.exams = checkedValues;
+          else if (name === 'subject') state.subjects = checkedValues;
+          else if (name === 'type') state.resourceTypes = checkedValues;
+          else if (name === 'board') state.boards = checkedValues;
+          else if (name === 'lang') state.languages = checkedValues;
+
+          StudyHubSearch.syncUrlParams(state);
+          executeSearch();
+        }
+      });
+
+      // Search input change
+      let debounceTimeout = null;
+      searchInput.addEventListener('input', () => {
+        clearTimeout(debounceTimeout);
+        debounceTimeout = setTimeout(() => {
+          state.q = searchInput.value.trim();
+          StudyHubSearch.syncUrlParams(state, true);
+          executeSearch();
+        }, 150);
+      });
+
+      // Sort change
+      sortSelect.addEventListener('change', () => {
+        state.sort = sortSelect.value;
+        StudyHubSearch.syncUrlParams(state);
+        executeSearch();
+      });
+
+      // Reset button
+      resetBtn.addEventListener('click', resetAll);
+
+      // Handle browser back/forward buttons
+      window.addEventListener('popstate', () => {
+        state = StudyHubSearch.parseUrlParams();
+        searchInput.value = state.q || '';
+        sortSelect.value = state.sort || 'relevance';
+        populateFilterOptions();
+        executeSearch();
+      });
+
+      // Run initial search
+      executeSearch();
+    });
+  </script>
+</body>
+</html>

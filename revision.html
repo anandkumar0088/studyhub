@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Revision Checklist & Chapter Completion Tracker — StudyHub</title>
+  <meta name="description" content="Track your chapter-by-chapter revision for CBSE Class 10, Class 12, NEET UG Biology, and JEE Physics. Stored privately in your browser.">
+  <link rel="canonical" href="https://studyhub.local/revision.html">
+
+  <link rel="icon" type="image/svg+xml" href="./favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/icons/favicon-32x32.png">
+  <link rel="apple-touch-icon" href="./assets/icons/apple-touch-icon.png">
+  <link rel="manifest" href="./site.webmanifest">
+  <meta name="theme-color" content="#0f2942">
+
+  <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body>
+  <a href="#mainContent" class="skip-link">Skip to main content</a>
+
+  <!-- Header -->
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <a href="./index.html" class="brand-logo-link" aria-label="StudyHub Homepage">
+        <img src="./assets/icons/logo.svg" alt="StudyHub" class="brand-logo-svg" width="160" height="40">
+      </a>
+
+      <nav class="nav-desktop" aria-label="Main Navigation">
+        <a href="./classes.html" class="nav-link">Browse Classes</a>
+        <a href="./exams.html" class="nav-link">Competitive Exams</a>
+        <a href="./subjects.html" class="nav-link">Subjects</a>
+        <a href="./papers.html" class="nav-link">Question Papers</a>
+        <a href="./articles/index.html" class="nav-link">Articles</a>
+        <a href="./planner.html" class="nav-link active">Study Tools</a>
+        <a href="./about.html" class="nav-link">About</a>
+      </nav>
+
+      <div class="header-actions">
+        <a href="./search.html" class="search-trigger-btn" aria-label="Open search">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+          <span>Search</span>
+          <span class="keyboard-shortcut-key">/</span>
+        </a>
+        <a href="./saved.html" class="icon-action-btn" aria-label="Saved Bookmarks">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path></svg>
+          <span class="icon-action-badge bookmark-count-badge" style="display: none;">0</span>
+        </a>
+        <button type="button" class="icon-action-btn theme-toggle-btn" aria-label="Toggle Theme">
+          <span class="theme-icon-container">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+          </span>
+        </button>
+        <button type="button" class="mobile-menu-btn" aria-label="Open menu">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="mobile-drawer-overlay"></div>
+  <aside class="mobile-drawer" aria-label="Mobile Navigation">
+    <div class="drawer-header">
+      <img src="./assets/icons/logo.svg" alt="StudyHub" width="130" height="32">
+      <button type="button" class="drawer-close-btn icon-action-btn" aria-label="Close menu">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+      </button>
+    </div>
+    <div class="drawer-nav-list">
+      <a href="./index.html" class="drawer-link">Home</a>
+      <a href="./search.html" class="drawer-link">Discovery Search</a>
+      <a href="./planner.html" class="drawer-link">Study Planner</a>
+      <a href="./revision.html" class="drawer-link active">Revision Checklist</a>
+      <a href="./timer.html" class="drawer-link">Focus Study Timer</a>
+      <a href="./saved.html" class="drawer-link">Saved Resources</a>
+    </div>
+  </aside>
+
+  <!-- Breadcrumbs -->
+  <div class="breadcrumbs-bar">
+    <div class="container">
+      <nav aria-label="Breadcrumb">
+        <ol class="breadcrumb-list">
+          <li class="breadcrumb-item"><a href="./index.html">Home</a></li>
+          <li class="breadcrumb-item"><a href="./planner.html">Study Tools</a></li>
+          <li class="breadcrumb-item" aria-current="page"><span>Revision Checklist</span></li>
+        </ol>
+      </nav>
+    </div>
+  </div>
+
+  <main id="mainContent" class="main-content" style="padding-top: 2.5rem; padding-bottom: 4rem;">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">Structured Syllabus Tracking</span>
+        <h1 class="section-title">Chapter-Level Revision Checklist</h1>
+        <p class="section-description">
+          Monitor your preparation status chapter-by-chapter across official school board and national entrance examination syllabi.
+        </p>
+      </div>
+
+      <!-- Tools Navigation Subbar -->
+      <div style="display: flex; gap: 0.5rem; flex-wrap: wrap; margin-bottom: 2rem;">
+        <a href="./planner.html" class="quick-link-tag">Study Planner</a>
+        <a href="./revision.html" class="quick-link-tag active" style="font-weight: 700; border-color: var(--brand-navy); background: var(--bg-subtle);">Revision Checklist</a>
+        <a href="./timer.html" class="quick-link-tag">Focus Study Timer</a>
+        <a href="./compare.html" class="quick-link-tag">Resource Comparator</a>
+      </div>
+
+      <!-- Curriculum Selector Bar -->
+      <div style="background: var(--bg-surface); border: 1px solid var(--border-default); border-radius: var(--radius-md); padding: 1.25rem; margin-bottom: 2rem; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem;">
+        <div>
+          <label for="curriculumSelector" style="font-size: 0.8125rem; font-weight: 700; text-transform: uppercase; color: var(--text-muted); display: block; margin-bottom: 0.35rem;">
+            Select Target Syllabus / Curriculum:
+          </label>
+          <select id="curriculumSelector" class="catalog-sort-select" style="font-size: 1rem; padding: 0.5rem 1rem; min-width: 280px;">
+            <!-- Populated from data/checklists.json -->
+          </select>
+        </div>
+        <div style="font-size: 0.8125rem; color: var(--text-subtle); max-width: 320px; line-height: 1.4;">
+          🔒 Progress is stored strictly in your current browser session/localStorage. No accounts or sync required.
+        </div>
+      </div>
+
+      <!-- Progress Summary Bar -->
+      <div class="planner-progress-card" style="margin-bottom: 1.5rem;">
+        <div style="flex: 1;">
+          <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 0.5rem;">
+            <h2 id="checklistCurriculumTitle" style="font-size: 1rem; font-weight: 700; color: var(--text-main);">
+              Curriculum Progress
+            </h2>
+            <span id="checklistProgressLabel" style="font-size: 0.9375rem; font-weight: 700; color: var(--brand-amber-dark);">0% Completed</span>
+          </div>
+          <div class="progress-track">
+            <div id="checklistProgressFill" class="progress-fill" style="width: 0%;"></div>
+          </div>
+        </div>
+        <div id="checklistSummaryText" style="font-size: 0.8125rem; color: var(--text-muted); text-align: right; min-width: 180px;">
+          0 completed
+        </div>
+      </div>
+
+      <!-- Checklist Chapters List Container -->
+      <div id="checklistChaptersList" aria-live="polite">
+        <!-- Rendered by assets/js/checklist.js -->
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-bottom-bar">
+        <div>&copy; <span id="currentYear">2026</span> StudyHub. Dedicated to open, accessible learning.</div>
+        <div><a href="./disclaimer.html" class="footer-link">Legal Disclaimer</a> • <a href="./privacy.html" class="footer-link">Privacy Policy</a></div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="./assets/js/storage.js"></script>
+  <script src="./assets/js/ui.js"></script>
+  <script src="./assets/js/checklist.js"></script>
+  <script>
+    document.getElementById('currentYear').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

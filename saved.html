@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Saved Bookmarks & Recently Viewed Resources — StudyHub</title>
+  <meta name="description" content="Manage your saved study bookmarks, export your resource links as JSON or CSV, and view recently opened learning resources.">
+  <link rel="canonical" href="https://studyhub.local/saved.html">
+
+  <link rel="icon" type="image/svg+xml" href="./favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/icons/favicon-32x32.png">
+  <link rel="apple-touch-icon" href="./assets/icons/apple-touch-icon.png">
+  <link rel="manifest" href="./site.webmanifest">
+  <meta name="theme-color" content="#0f2942">
+
+  <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body>
+  <a href="#mainContent" class="skip-link">Skip to main content</a>
+
+  <!-- Header -->
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <a href="./index.html" class="brand-logo-link" aria-label="StudyHub Homepage">
+        <img src="./assets/icons/logo.svg" alt="StudyHub" class="brand-logo-svg" width="160" height="40">
+      </a>
+
+      <nav class="nav-desktop" aria-label="Main Navigation">
+        <a href="./classes.html" class="nav-link">Browse Classes</a>
+        <a href="./exams.html" class="nav-link">Competitive Exams</a>
+        <a href="./subjects.html" class="nav-link">Subjects</a>
+        <a href="./papers.html" class="nav-link">Question Papers</a>
+        <a href="./articles/index.html" class="nav-link">Articles</a>
+        <a href="./planner.html" class="nav-link">Study Tools</a>
+        <a href="./about.html" class="nav-link">About</a>
+      </nav>
+
+      <div class="header-actions">
+        <a href="./search.html" class="search-trigger-btn" aria-label="Open search">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+          <span>Search</span>
+          <span class="keyboard-shortcut-key">/</span>
+        </a>
+        <button type="button" class="icon-action-btn theme-toggle-btn" aria-label="Toggle Theme">
+          <span class="theme-icon-container">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+          </span>
+        </button>
+        <button type="button" class="mobile-menu-btn" aria-label="Open menu">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="mobile-drawer-overlay"></div>
+  <aside class="mobile-drawer" aria-label="Mobile Navigation">
+    <div class="drawer-header">
+      <img src="./assets/icons/logo.svg" alt="StudyHub" width="130" height="32">
+      <button type="button" class="drawer-close-btn icon-action-btn" aria-label="Close menu">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+      </button>
+    </div>
+    <div class="drawer-nav-list">
+      <a href="./index.html" class="drawer-link">Home</a>
+      <a href="./search.html" class="drawer-link">Discovery Search</a>
+      <a href="./classes.html" class="drawer-link">Classes</a>
+      <a href="./exams.html" class="drawer-link">Exams</a>
+      <a href="./planner.html" class="drawer-link">Study Planner</a>
+      <a href="./saved.html" class="drawer-link active">Saved Bookmarks</a>
+    </div>
+  </aside>
+
+  <!-- Breadcrumbs -->
+  <div class="breadcrumbs-bar">
+    <div class="container">
+      <nav aria-label="Breadcrumb">
+        <ol class="breadcrumb-list">
+          <li class="breadcrumb-item"><a href="./index.html">Home</a></li>
+          <li class="breadcrumb-item" aria-current="page"><span>Saved Bookmarks & Recent Activity</span></li>
+        </ol>
+      </nav>
+    </div>
+  </div>
+
+  <main id="mainContent" class="main-content" style="padding-top: 2.5rem; padding-bottom: 4rem;">
+    <div class="container">
+      <!-- Page Header -->
+      <div style="display: flex; align-items: flex-end; justify-content: space-between; flex-wrap: wrap; gap: 1rem; margin-bottom: 2rem; padding-bottom: 1.25rem; border-bottom: 1px solid var(--border-default);">
+        <div>
+          <span class="section-label">Local Browser Storage</span>
+          <h1 class="section-title">Saved Educational Resources</h1>
+          <p class="section-description">
+            Your personal reading list stored privately in this browser. Export to JSON or CSV for offline keeping.
+          </p>
+        </div>
+        <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+          <button type="button" id="exportJsonBtn" class="open-resource-btn" style="background: var(--bg-surface); border: 1px solid var(--border-default); color: var(--text-main);" title="Export saved list as a JSON file">
+            Export JSON
+          </button>
+          <button type="button" id="exportCsvBtn" class="open-resource-btn" style="background: var(--bg-surface); border: 1px solid var(--border-default); color: var(--text-main);" title="Export saved list as a CSV spreadsheet">
+            Export CSV
+          </button>
+        </div>
+      </div>
+
+      <!-- Tab View: Bookmarks vs Recently Viewed -->
+      <div style="display: flex; gap: 0.5rem; margin-bottom: 2rem;">
+        <button type="button" id="tabBookmarksBtn" class="quick-link-tag active" style="font-size: 0.9375rem; padding: 0.5rem 1rem;">
+          Saved Bookmarks (<span id="bookmarkTotalCount">0</span>)
+        </button>
+        <button type="button" id="tabRecentBtn" class="quick-link-tag" style="font-size: 0.9375rem; padding: 0.5rem 1rem;">
+          Recently Opened Resources (<span id="recentTotalCount">0</span>)
+        </button>
+      </div>
+
+      <!-- Bookmarks Section -->
+      <section id="bookmarksSection">
+        <div id="savedResourcesContainer" class="resources-list" aria-live="polite">
+          <!-- Rendered by JS -->
+        </div>
+      </section>
+
+      <!-- Recently Viewed Section -->
+      <section id="recentSection" style="display: none;">
+        <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 1rem;">
+          <p style="color: var(--text-muted); font-size: 0.875rem;">
+            Resources you opened during your recent study sessions.
+          </p>
+          <button type="button" id="clearRecentBtn" class="filter-reset-btn">Clear Recent History</button>
+        </div>
+        <div id="recentResourcesContainer" class="resources-list" aria-live="polite">
+          <!-- Rendered by JS -->
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-bottom-bar">
+        <div>&copy; <span id="currentYear">2026</span> StudyHub. Dedicated to open, accessible learning.</div>
+        <div><a href="./disclaimer.html" class="footer-link">Legal Disclaimer</a> • <a href="./privacy.html" class="footer-link">Privacy Policy</a></div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="./assets/js/storage.js"></script>
+  <script src="./assets/js/catalog.js"></script>
+  <script src="./assets/js/search.js"></script>
+  <script src="./assets/js/ui.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', async () => {
+      document.getElementById('currentYear').textContent = new Date().getFullYear();
+      await StudyHubCatalog.init();
+
+      const allResources = StudyHubCatalog.getAll();
+      const bookmarksContainer = document.getElementById('savedResourcesContainer');
+      const recentContainer = document.getElementById('recentResourcesContainer');
+      const bookmarkTotalCount = document.getElementById('bookmarkTotalCount');
+      const recentTotalCount = document.getElementById('recentTotalCount');
+
+      const tabBookmarksBtn = document.getElementById('tabBookmarksBtn');
+      const tabRecentBtn = document.getElementById('tabRecentBtn');
+      const bookmarksSection = document.getElementById('bookmarksSection');
+      const recentSection = document.getElementById('recentSection');
+
+      function renderBookmarks() {
+        const ids = StudyHubStorage.getBookmarks();
+        bookmarkTotalCount.textContent = ids.length;
+
+        if (ids.length === 0) {
+          bookmarksContainer.innerHTML = `
+            <div class="empty-state-card">
+              <div class="empty-state-title">No saved bookmarks yet</div>
+              <p class="empty-state-text">
+                Browse our textbook catalog, question papers, or exam archives and click the bookmark ribbon icon on any resource card to save it here.
+              </p>
+              <a href="./search.html" class="open-resource-btn" style="margin: 0 auto;">
+                Explore Catalog &rarr;
+              </a>
+            </div>
+          `;
+          return;
+        }
+
+        bookmarksContainer.innerHTML = '';
+        ids.forEach(id => {
+          const r = StudyHubCatalog.getById(id);
+          if (r) {
+            bookmarksContainer.appendChild(StudyHubUI.renderResourceCard(r));
+          }
+        });
+      }
+
+      function renderRecent() {
+        const ids = StudyHubStorage.getRecent();
+        recentTotalCount.textContent = ids.length;
+
+        if (ids.length === 0) {
+          recentContainer.innerHTML = `
+            <div class="empty-state-card">
+              <div class="empty-state-title">No recently viewed resources</div>
+              <p class="empty-state-text">
+                Resources you open via "Open Original Resource" will automatically show up here for quick return.
+              </p>
+            </div>
+          `;
+          return;
+        }
+
+        recentContainer.innerHTML = '';
+        ids.forEach(id => {
+          const r = StudyHubCatalog.getById(id);
+          if (r) {
+            recentContainer.appendChild(StudyHubUI.renderResourceCard(r));
+          }
+        });
+      }
+
+      // Tab switching
+      tabBookmarksBtn.addEventListener('click', () => {
+        tabBookmarksBtn.classList.add('active');
+        tabRecentBtn.classList.remove('active');
+        bookmarksSection.style.display = 'block';
+        recentSection.style.display = 'none';
+        renderBookmarks();
+      });
+
+      tabRecentBtn.addEventListener('click', () => {
+        tabRecentBtn.classList.add('active');
+        tabBookmarksBtn.classList.remove('active');
+        recentSection.style.display = 'block';
+        bookmarksSection.style.display = 'none';
+        renderRecent();
+      });
+
+      // Clear recent history
+      const clearRecentBtn = document.getElementById('clearRecentBtn');
+      if (clearRecentBtn) {
+        clearRecentBtn.addEventListener('click', () => {
+          if (confirm('Clear recently opened resources history?')) {
+            StudyHubStorage.clearRecent();
+            renderRecent();
+          }
+        });
+      }
+
+      // Export JSON / CSV
+      document.getElementById('exportJsonBtn').addEventListener('click', () => {
+        const ids = StudyHubStorage.getBookmarks();
+        if (ids.length === 0) {
+          alert('You have no saved bookmarks to export.');
+          return;
+        }
+        StudyHubStorage.exportBookmarksJSON(allResources);
+      });
+
+      document.getElementById('exportCsvBtn').addEventListener('click', () => {
+        const ids = StudyHubStorage.getBookmarks();
+        if (ids.length === 0) {
+          alert('You have no saved bookmarks to export.');
+          return;
+        }
+        StudyHubStorage.exportBookmarksCSV(allResources);
+      });
+
+      // Listen for bookmark updates from within card interactions
+      window.addEventListener('studyhub:bookmarks-updated', () => {
+        renderBookmarks();
+      });
+
+      renderBookmarks();
+      renderRecent();
+    });
+  </script>
+</body>
+</html>

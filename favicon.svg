@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" fill="none">
+  <defs>
+    <linearGradient id="shFavGrad" x1="4" y1="4" x2="60" y2="60" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#0f2942" />
+      <stop offset="100%" stop-color="#1e3a5f" />
+    </linearGradient>
+  </defs>
+  <rect x="2" y="2" width="60" height="60" rx="14" fill="url(#shFavGrad)" />
+  <!-- Book pages -->
+  <path d="M16 44C22 41 28 41 31 42.5V20C28 19 22 19 16 22V44Z" fill="#ffffff" fill-opacity="0.95" />
+  <path d="M48 44C42 41 36 41 33 42.5V20C36 19 42 19 48 22V44Z" fill="#ffffff" fill-opacity="0.82" />
+  <!-- Spine line -->
+  <line x1="32" y1="20" x2="32" y2="44" stroke="#f59e0b" stroke-width="2.5" stroke-linecap="round" />
+  <!-- Compass/North Star accent -->
+  <circle cx="32" cy="14" r="3.5" fill="#f59e0b" />
+</svg>

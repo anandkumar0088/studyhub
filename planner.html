@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Study Planner & Daily Revision Tracker — StudyHub</title>
+  <meta name="description" content="Organize your study routine, track chapters, set exam target dates, and monitor completion metrics locally in your browser.">
+  <link rel="canonical" href="https://studyhub.local/planner.html">
+
+  <link rel="icon" type="image/svg+xml" href="./favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/icons/favicon-32x32.png">
+  <link rel="apple-touch-icon" href="./assets/icons/apple-touch-icon.png">
+  <link rel="manifest" href="./site.webmanifest">
+  <meta name="theme-color" content="#0f2942">
+
+  <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body>
+  <a href="#mainContent" class="skip-link">Skip to main content</a>
+
+  <!-- Header -->
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <a href="./index.html" class="brand-logo-link" aria-label="StudyHub Homepage">
+        <img src="./assets/icons/logo.svg" alt="StudyHub" class="brand-logo-svg" width="160" height="40">
+      </a>
+
+      <nav class="nav-desktop" aria-label="Main Navigation">
+        <a href="./classes.html" class="nav-link">Browse Classes</a>
+        <a href="./exams.html" class="nav-link">Competitive Exams</a>
+        <a href="./subjects.html" class="nav-link">Subjects</a>
+        <a href="./papers.html" class="nav-link">Question Papers</a>
+        <a href="./articles/index.html" class="nav-link">Articles</a>
+        <a href="./planner.html" class="nav-link active">Study Tools</a>
+        <a href="./about.html" class="nav-link">About</a>
+      </nav>
+
+      <div class="header-actions">
+        <a href="./search.html" class="search-trigger-btn" aria-label="Open search">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+          <span>Search</span>
+          <span class="keyboard-shortcut-key">/</span>
+        </a>
+        <a href="./saved.html" class="icon-action-btn" aria-label="Saved Bookmarks">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path></svg>
+          <span class="icon-action-badge bookmark-count-badge" style="display: none;">0</span>
+        </a>
+        <button type="button" class="icon-action-btn theme-toggle-btn" aria-label="Toggle Theme">
+          <span class="theme-icon-container">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+          </span>
+        </button>
+        <button type="button" class="mobile-menu-btn" aria-label="Open menu">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="mobile-drawer-overlay"></div>
+  <aside class="mobile-drawer" aria-label="Mobile Navigation">
+    <div class="drawer-header">
+      <img src="./assets/icons/logo.svg" alt="StudyHub" width="130" height="32">
+      <button type="button" class="drawer-close-btn icon-action-btn" aria-label="Close menu">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+      </button>
+    </div>
+    <div class="drawer-nav-list">
+      <a href="./index.html" class="drawer-link">Home</a>
+      <a href="./search.html" class="drawer-link">Discovery Search</a>
+      <a href="./planner.html" class="drawer-link active">Study Planner</a>
+      <a href="./revision.html" class="drawer-link">Revision Checklist</a>
+      <a href="./timer.html" class="drawer-link">Focus Study Timer</a>
+      <a href="./compare.html" class="drawer-link">Compare Resources</a>
+      <a href="./saved.html" class="drawer-link">Saved Resources</a>
+    </div>
+  </aside>
+
+  <!-- Breadcrumbs -->
+  <div class="breadcrumbs-bar">
+    <div class="container">
+      <nav aria-label="Breadcrumb">
+        <ol class="breadcrumb-list">
+          <li class="breadcrumb-item"><a href="./index.html">Home</a></li>
+          <li class="breadcrumb-item"><a href="./planner.html">Study Tools</a></li>
+          <li class="breadcrumb-item" aria-current="page"><span>Study Planner</span></li>
+        </ol>
+      </nav>
+    </div>
+  </div>
+
+  <main id="mainContent" class="main-content" style="padding-top: 2.5rem; padding-bottom: 4rem;">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">Academic Productivity</span>
+        <h1 class="section-title">Personal Study Planner</h1>
+        <p class="section-description">
+          Add specific chapters, practice sets, or revision tasks with target dates. All task data remains stored locally on your device with zero tracking.
+        </p>
+      </div>
+
+      <!-- Tools Navigation Subbar -->
+      <div style="display: flex; gap: 0.5rem; flex-wrap: wrap; margin-bottom: 2rem;">
+        <a href="./planner.html" class="quick-link-tag active" style="font-weight: 700; border-color: var(--brand-navy); background: var(--bg-subtle);">Study Planner</a>
+        <a href="./revision.html" class="quick-link-tag">Revision Checklist</a>
+        <a href="./timer.html" class="quick-link-tag">Focus Study Timer</a>
+        <a href="./compare.html" class="quick-link-tag">Resource Comparator</a>
+      </div>
+
+      <!-- Planner Grid: Task Form (Left) + Tasks List & Stats (Right) -->
+      <div class="planner-grid">
+        <!-- Task Creation Card -->
+        <aside class="planner-form-card" aria-label="Add Study Task">
+          <h2 style="font-size: 1.15rem; font-weight: 700; margin-bottom: 1.25rem; color: var(--text-main);">
+            Add Study Target
+          </h2>
+
+          <form id="plannerForm">
+            <div class="form-group">
+              <label for="taskSubject" class="form-label">Subject</label>
+              <select id="taskSubject" class="form-control">
+                <option value="Mathematics">Mathematics</option>
+                <option value="Physics">Physics</option>
+                <option value="Chemistry">Chemistry</option>
+                <option value="Biology">Biology</option>
+                <option value="Science">General Science</option>
+                <option value="Social Science">Social Science</option>
+                <option value="History">History</option>
+                <option value="Geography">Geography</option>
+                <option value="Political Science">Political Science</option>
+                <option value="Economics">Economics</option>
+                <option value="English">English</option>
+                <option value="Hindi">Hindi</option>
+                <option value="General Study">General / Revision</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="taskDescription" class="form-label">Task Description</label>
+              <input 
+                type="text" 
+                id="taskDescription" 
+                class="form-control" 
+                placeholder="e.g. Solve NCERT Exemplar Chapter 10 Light..." 
+                required
+              >
+            </div>
+
+            <div class="form-group">
+              <label for="taskDueDate" class="form-label">Target Completion Date</label>
+              <input type="date" id="taskDueDate" class="form-control">
+            </div>
+
+            <div class="form-group">
+              <label for="taskPriority" class="form-label">Priority Level</label>
+              <select id="taskPriority" class="form-control">
+                <option value="Medium">Medium Priority</option>
+                <option value="High">High Priority</option>
+                <option value="Low">Low Priority</option>
+              </select>
+            </div>
+
+            <button type="submit" class="form-btn-submit">Add Target Task</button>
+          </form>
+
+          <div style="margin-top: 1.5rem; padding-top: 1rem; border-top: 1px solid var(--border-subtle); font-size: 0.8125rem; color: var(--text-subtle); line-height: 1.5;">
+            💡 <strong>Study Tip:</strong> Break complex chapters down into 45-minute focused problem-solving tasks rather than vague goals like "Study Physics".
+          </div>
+        </aside>
+
+        <!-- Tasks Display & Progress -->
+        <section aria-label="Task List & Metrics">
+          <!-- Progress Card -->
+          <div class="planner-progress-card">
+            <div style="flex: 1;">
+              <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 0.5rem;">
+                <span style="font-size: 0.875rem; font-weight: 700; color: var(--text-main);">Study Completion Progress</span>
+                <span id="plannerProgressLabel" style="font-size: 0.875rem; font-weight: 700; color: var(--brand-amber-dark);">0% Completed</span>
+              </div>
+              <div class="progress-track">
+                <div id="plannerProgressFill" class="progress-fill" style="width: 0%;"></div>
+              </div>
+            </div>
+            <div id="plannerStatsSummary" style="font-size: 0.8125rem; color: var(--text-muted); text-align: right; min-width: 160px;">
+              0 completed of 0 tasks
+            </div>
+          </div>
+
+          <!-- Filter Tabs -->
+          <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 1rem;">
+            <div style="display: flex; gap: 0.35rem;">
+              <button type="button" class="planner-filter-btn quick-link-tag active" data-filter="all">All Tasks</button>
+              <button type="button" class="planner-filter-btn quick-link-tag" data-filter="pending">Upcoming & Pending</button>
+              <button type="button" class="planner-filter-btn quick-link-tag" data-filter="completed">Completed</button>
+            </div>
+          </div>
+
+          <!-- Tasks List -->
+          <div id="plannerTasksList" aria-live="polite">
+            <!-- Rendered by assets/js/planner.js -->
+          </div>
+        </section>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-bottom-bar">
+        <div>&copy; <span id="currentYear">2026</span> StudyHub. Dedicated to open, accessible learning.</div>
+        <div><a href="./disclaimer.html" class="footer-link">Legal Disclaimer</a> • <a href="./privacy.html" class="footer-link">Privacy Policy</a></div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="./assets/js/storage.js"></script>
+  <script src="./assets/js/ui.js"></script>
+  <script src="./assets/js/planner.js"></script>
+  <script>
+    document.getElementById('currentYear').textContent = new Date().getFullYear();
+    // Default task date to today
+    const dateInput = document.getElementById('taskDueDate');
+    if (dateInput) {
+      dateInput.value = new Date().toISOString().slice(0, 10);
+    }
+  </script>
+</body>
+</html>

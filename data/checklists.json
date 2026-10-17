@@ -1,0 +1,93 @@
+{
+  "curricula": [
+    {
+      "id": "cbse-class10-science",
+      "name": "CBSE Class 10 Science",
+      "category": "Class 10",
+      "totalChapters": 13,
+      "chapters": [
+        {"id": "c10-sci-1", "title": "Chemical Reactions and Equations", "subject": "Chemistry", "subtopics": ["Balancing equations", "Types of reactions", "Corrosion & Rancidity"]},
+        {"id": "c10-sci-2", "title": "Acids, Bases and Salts", "subject": "Chemistry", "subtopics": ["Indicators", "pH scale", "Salts (Bleaching powder, Baking soda, Plaster of Paris)"]},
+        {"id": "c10-sci-3", "title": "Metals and Non-metals", "subject": "Chemistry", "subtopics": ["Physical & chemical properties", "Reactivity series", "Ionic compounds", "Metallurgy"]},
+        {"id": "c10-sci-4", "title": "Carbon and its Compounds", "subject": "Chemistry", "subtopics": ["Covalent bonding", "Homologous series", "Nomenclature", "Combustion, Oxidation, Addition"]},
+        {"id": "c10-sci-5", "title": "Life Processes", "subject": "Biology", "subtopics": ["Autotrophic & heterotrophic nutrition", "Respiration", "Transportation in humans & plants", "Excretion"]},
+        {"id": "c10-sci-6", "title": "Control and Coordination", "subject": "Biology", "subtopics": ["Nervous system", "Reflex arc", "Human brain", "Plant hormones", "Animal endocrine system"]},
+        {"id": "c10-sci-7", "title": "How do Organisms Reproduce?", "subject": "Biology", "subtopics": ["Asexual reproduction modes", "Sexual reproduction in plants", "Human reproductive system", "Reproductive health"]},
+        {"id": "c10-sci-8", "title": "Heredity and Evolution", "subject": "Biology", "subtopics": ["Mendel's monohybrid & dihybrid crosses", "Sex determination in humans"]},
+        {"id": "c10-sci-9", "title": "Light – Reflection and Refraction", "subject": "Physics", "subtopics": ["Mirror formula & magnification", "Refractive index & Snell's law", "Lens formula & power of lens"]},
+        {"id": "c10-sci-10", "title": "The Human Eye and the Colourful World", "subject": "Physics", "subtopics": ["Structure of eye", "Defects of vision & correction", "Prism dispersion", "Atmospheric refraction & scattering"]},
+        {"id": "c10-sci-11", "title": "Electricity", "subject": "Physics", "subtopics": ["Ohm's law", "Factors affecting resistance", "Series & parallel resistor combinations", "Joule's law of heating", "Electric power"]},
+        {"id": "c10-sci-12", "title": "Magnetic Effects of Electric Current", "subject": "Physics", "subtopics": ["Magnetic field lines", "Right-hand thumb rule", "Solenoid", "Fleming's left-hand rule", "Domestic electric circuits"]},
+        {"id": "c10-sci-13", "title": "Our Environment", "subject": "Biology", "subtopics": ["Eco-system & food chains", "Trophic levels & 10% energy law", "Ozone layer depletion", "Waste management"]}
+      ]
+    },
+    {
+      "id": "cbse-class10-maths",
+      "name": "CBSE Class 10 Mathematics",
+      "category": "Class 10",
+      "totalChapters": 14,
+      "chapters": [
+        {"id": "c10-m-1", "title": "Real Numbers", "subject": "Mathematics", "subtopics": ["Fundamental Theorem of Arithmetic", "Irrationality proofs"]},
+        {"id": "c10-m-2", "title": "Polynomials", "subject": "Mathematics", "subtopics": ["Geometrical meaning of zeroes", "Relationship between zeroes and coefficients"]},
+        {"id": "c10-m-3", "title": "Pair of Linear Equations in Two Variables", "subject": "Mathematics", "subtopics": ["Graphical method", "Substitution & Elimination methods"]},
+        {"id": "c10-m-4", "title": "Quadratic Equations", "subject": "Mathematics", "subtopics": ["Factorisation", "Quadratic formula", "Nature of roots"]},
+        {"id": "c10-m-5", "title": "Arithmetic Progressions", "subject": "Mathematics", "subtopics": ["nth term of an AP", "Sum of first n terms"]},
+        {"id": "c10-m-6", "title": "Triangles", "subject": "Mathematics", "subtopics": ["Basic Proportionality Theorem (Thales)", "Criteria for similarity of triangles"]},
+        {"id": "c10-m-7", "title": "Coordinate Geometry", "subject": "Mathematics", "subtopics": ["Distance formula", "Section formula"]},
+        {"id": "c10-m-8", "title": "Introduction to Trigonometry", "subject": "Mathematics", "subtopics": ["Trig ratios", "Trig ratios of 0°, 30°, 45°, 60°, 90°", "Trig identities"]},
+        {"id": "c10-m-9", "title": "Some Applications of Trigonometry", "subject": "Mathematics", "subtopics": ["Heights and distances", "Angles of elevation and depression"]},
+        {"id": "c10-m-10", "title": "Circles", "subject": "Mathematics", "subtopics": ["Tangent at any point", "Lengths of tangents from external point"]},
+        {"id": "c10-m-11", "title": "Areas Related to Circles", "subject": "Mathematics", "subtopics": ["Area of sectors and segments of circle"]},
+        {"id": "c10-m-12", "title": "Surface Areas and Volumes", "subject": "Mathematics", "subtopics": ["Combinations of solids", "Cylinders, cones, spheres, hemispheres"]},
+        {"id": "c10-m-13", "title": "Statistics", "subject": "Mathematics", "subtopics": ["Mean of grouped data", "Median of grouped data", "Mode of grouped data"]},
+        {"id": "c10-m-14", "title": "Probability", "subject": "Mathematics", "subtopics": ["Classical probability definition", "Simple event problems"]}
+      ]
+    },
+    {
+      "id": "cbse-class12-physics",
+      "name": "CBSE Class 12 / JEE Physics",
+      "category": "Class 12 / JEE",
+      "totalChapters": 14,
+      "chapters": [
+        {"id": "c12-phy-1", "title": "Electric Charges and Fields", "subject": "Physics", "subtopics": ["Coulomb's Law", "Electric field & flux", "Gauss's Theorem & applications"]},
+        {"id": "c12-phy-2", "title": "Electrostatic Potential and Capacitance", "subject": "Physics", "subtopics": ["Equipotential surfaces", "Capacitance of parallel plate", "Dielectrics & energy stored"]},
+        {"id": "c12-phy-3", "title": "Current Electricity", "subject": "Physics", "subtopics": ["Drift velocity & Ohm's law", "Kirchhoff's rules", "Wheatstone bridge"]},
+        {"id": "c12-phy-4", "title": "Moving Charges and Magnetism", "subject": "Physics", "subtopics": ["Biot-Savart Law", "Ampere's Circuital Law", "Force between parallel currents", "Galvanometer"]},
+        {"id": "c12-phy-5", "title": "Magnetism and Matter", "subject": "Physics", "subtopics": ["Bar magnet as equivalent solenoid", "Earth's magnetic field", "Dia, Para, Ferro magnetism"]},
+        {"id": "c12-phy-6", "title": "Electromagnetic Induction", "subject": "Physics", "subtopics": ["Faraday's & Lenz's Law", "Motional EMF", "Self & mutual inductance"]},
+        {"id": "c12-phy-7", "title": "Alternating Current", "subject": "Physics", "subtopics": ["Peak & RMS values", "LCR series circuit & resonance", "AC generator & transformer"]},
+        {"id": "c12-phy-8", "title": "Electromagnetic Waves", "subject": "Physics", "subtopics": ["Displacement current", "EM spectrum & characteristics"]},
+        {"id": "c12-phy-9", "title": "Ray Optics and Optical Instruments", "subject": "Physics", "subtopics": ["Total internal reflection", "Lens maker's formula", "Prism dispersion", "Microscope & telescope"]},
+        {"id": "c12-phy-10", "title": "Wave Optics", "subject": "Physics", "subtopics": ["Huygens principle", "Interference & Young's double slit", "Diffraction by single slit"]},
+        {"id": "c12-phy-11", "title": "Dual Nature of Radiation and Matter", "subject": "Physics", "subtopics": ["Photoelectric effect", "Einstein's photoelectric equation", "de Broglie wavelength"]},
+        {"id": "c12-phy-12", "title": "Atoms", "subject": "Physics", "subtopics": ["Alpha particle scattering", "Bohr model & energy levels", "Hydrogen spectrum"]},
+        {"id": "c12-phy-13", "title": "Nuclei", "subject": "Physics", "subtopics": ["Mass defect & binding energy", "Nuclear fission & fusion"]},
+        {"id": "c12-phy-14", "title": "Semiconductor Electronics", "subject": "Physics", "subtopics": ["Intrinsice & extrinsic semiconductors", "p-n junction diode & I-V curves", "Diode as rectifier"]}
+      ]
+    },
+    {
+      "id": "neet-biology",
+      "name": "NEET UG Biology (Classes 11 & 12)",
+      "category": "NEET UG",
+      "totalChapters": 16,
+      "chapters": [
+        {"id": "neet-bio-1", "title": "Diversity in the Living World", "subject": "Biology", "subtopics": ["Taxonomic hierarchy", "Five kingdom classification", "Plant & Animal kingdom"]},
+        {"id": "neet-bio-2", "title": "Structural Organisation in Plants and Animals", "subject": "Biology", "subtopics": ["Plant anatomy & morphology", "Animal tissues & frog anatomy"]},
+        {"id": "neet-bio-3", "title": "Cell: Structure and Function", "subject": "Biology", "subtopics": ["Cell theory", "Organelles", "Biomolecules", "Mitosis & Meiosis"]},
+        {"id": "neet-bio-4", "title": "Plant Physiology", "subject": "Biology", "subtopics": ["Photosynthesis in higher plants", "Respiration in plants", "Plant growth regulators"]},
+        {"id": "neet-bio-5", "title": "Human Physiology: Digestion, Breathing & Circulation", "subject": "Biology", "subtopics": ["Respiratory volumes & exchange", "Cardiac cycle & ECG", "Blood groups"]},
+        {"id": "neet-bio-6", "title": "Human Physiology: Excretion, Locomotion & Neural Control", "subject": "Biology", "subtopics": ["Nephron & urine formation", "Sliding filament theory", "Nerve impulse & reflex"]},
+        {"id": "neet-bio-7", "title": "Chemical Coordination and Integration", "subject": "Biology", "subtopics": ["Hypothalamus, Pituitary, Thyroid, Adrenal, Pancreas hormones"]},
+        {"id": "neet-bio-8", "title": "Sexual Reproduction in Flowering Plants", "subject": "Biology", "subtopics": ["Microsporogenesis & megasporogenesis", "Double fertilization", "Apomixis"]},
+        {"id": "neet-bio-9", "title": "Human Reproduction", "subject": "Biology", "subtopics": ["Male & female reproductive systems", "Gametogenesis", "Menstrual cycle", "Parturition"]},
+        {"id": "neet-bio-10", "title": "Reproductive Health", "subject": "Biology", "subtopics": ["Contraceptive methods", "MTP & STIs", "ART (IVF, ZIFT, ICSI)"]},
+        {"id": "neet-bio-11", "title": "Principles of Inheritance and Variation", "subject": "Biology", "subtopics": ["Mendelian ratios", "Incomplete dominance", "Linkage & recombination", "Pedigree analysis"]},
+        {"id": "neet-bio-12", "title": "Molecular Basis of Inheritance", "subject": "Biology", "subtopics": ["DNA structure & replication", "Transcription & translation", "Lac operon", "Human Genome Project"]},
+        {"id": "neet-bio-13", "title": "Evolution", "subject": "Biology", "subtopics": ["Origin of life", "Darwinian natural selection", "Hardy-Weinberg equilibrium", "Human evolution"]},
+        {"id": "neet-bio-14", "title": "Human Health and Disease", "subject": "Biology", "subtopics": ["Pathogens & diseases (Malaria, Typhoid)", "Immunity (Innate, Acquired, Vaccines)", "AIDS & Cancer"]},
+        {"id": "neet-bio-15", "title": "Biotechnology: Principles and Applications", "subject": "Biology", "subtopics": ["Recombinant DNA tools", "PCR & gel electrophoresis", "Bt crops & gene therapy"]},
+        {"id": "neet-bio-16", "title": "Ecology and Environment", "subject": "Biology", "subtopics": ["Population attributes", "Ecosystem pyramids & succession", "Biodiversity conservation"]}
+      ]
+    }
+  ]
+}

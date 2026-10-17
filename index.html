@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>StudyHub — Educational Resource Discovery for Indian Students</title>
+  <meta name="description" content="Discover verified NCERT textbooks, CBSE sample papers, previous-year question papers, syllabus guides, and chapter notes for Classes 1–12, NEET, JEE, CUET, and competitive exams.">
+  <link rel="canonical" href="https://studyhub.local/index.html">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://studyhub.local/index.html">
+  <meta property="og:title" content="StudyHub — Educational Resource Discovery Platform">
+  <meta property="og:description" content="Discover verified textbooks, notes, and question papers from official educational portals across India.">
+  <meta property="og:image" content="./assets/og-image.png">
+
+  <!-- Twitter / X -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="StudyHub — Educational Resource Discovery Platform">
+  <meta name="twitter:description" content="Discover verified textbooks, notes, and question papers from official educational portals across India.">
+  <meta name="twitter:image" content="./assets/og-image.png">
+
+  <!-- Favicons & Webmanifest -->
+  <link rel="icon" type="image/svg+xml" href="./favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/icons/favicon-32x32.png">
+  <link rel="apple-touch-icon" href="./assets/icons/apple-touch-icon.png">
+  <link rel="manifest" href="./site.webmanifest">
+  <meta name="theme-color" content="#0f2942">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="./assets/css/style.css">
+
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "StudyHub",
+    "url": "https://studyhub.local/",
+    "description": "Educational resource discovery platform for Indian school and competitive exam students.",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://studyhub.local/search.html?q={search_term_string}",
+      "query-input": "required name=search_term_string"
+    }
+  }
+  </script>
+</head>
+<body>
+  <a href="#mainContent" class="skip-link">Skip to main content</a>
+
+  <!-- Header -->
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <a href="./index.html" class="brand-logo-link" aria-label="StudyHub Homepage">
+        <img src="./assets/icons/logo.svg" alt="StudyHub" class="brand-logo-svg" width="160" height="40">
+      </a>
+
+      <!-- Desktop Navigation -->
+      <nav class="nav-desktop" aria-label="Main Navigation">
+        <div class="nav-item">
+          <a href="./classes.html" class="nav-link">
+            <span>Browse Classes</span>
+            <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" /></svg>
+          </a>
+          <div class="dropdown-menu">
+            <a href="./classes.html?class=10" class="dropdown-link"><span>Class 10 Board</span><span class="dropdown-badge">CBSE / ICSE</span></a>
+            <a href="./classes.html?class=12" class="dropdown-link"><span>Class 12 Board</span><span class="dropdown-badge">Science & Humanities</span></a>
+            <a href="./classes.html?class=9" class="dropdown-link"><span>Class 9 Secondary</span><span class="dropdown-badge">Foundation</span></a>
+            <a href="./classes.html?class=11" class="dropdown-link"><span>Class 11 Senior</span><span class="dropdown-badge">Core Prep</span></a>
+            <a href="./classes.html" class="dropdown-link"><span>All Classes (1 to 12) &rarr;</span></a>
+          </div>
+        </div>
+
+        <div class="nav-item">
+          <a href="./exams.html" class="nav-link">
+            <span>Competitive Exams</span>
+            <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" /></svg>
+          </a>
+          <div class="dropdown-menu">
+            <a href="./exams.html?exam=NEET" class="dropdown-link"><span>NEET UG</span><span class="dropdown-badge">Medical</span></a>
+            <a href="./exams.html?exam=JEE%20Main" class="dropdown-link"><span>JEE Main</span><span class="dropdown-badge">Engineering</span></a>
+            <a href="./exams.html?exam=JEE%20Advanced" class="dropdown-link"><span>JEE Advanced</span><span class="dropdown-badge">IITs</span></a>
+            <a href="./exams.html?exam=CUET" class="dropdown-link"><span>CUET (UG)</span><span class="dropdown-badge">Central Univ</span></a>
+            <a href="./exams.html?exam=UPSC" class="dropdown-link"><span>UPSC Civil Services</span><span class="dropdown-badge">IAS / IPS</span></a>
+            <a href="./exams.html?exam=SSC" class="dropdown-link"><span>SSC & Railways</span><span class="dropdown-badge">Govt Jobs</span></a>
+            <a href="./exams.html" class="dropdown-link"><span>All Examinations &rarr;</span></a>
+          </div>
+        </div>
+
+        <div class="nav-item">
+          <a href="./subjects.html" class="nav-link">
+            <span>Subjects</span>
+            <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" /></svg>
+          </a>
+          <div class="dropdown-menu">
+            <a href="./search.html?subject=Mathematics" class="dropdown-link"><span>Mathematics</span></a>
+            <a href="./search.html?subject=Science" class="dropdown-link"><span>Science (General)</span></a>
+            <a href="./search.html?subject=Physics" class="dropdown-link"><span>Physics</span></a>
+            <a href="./search.html?subject=Chemistry" class="dropdown-link"><span>Chemistry</span></a>
+            <a href="./search.html?subject=Biology" class="dropdown-link"><span>Biology</span></a>
+            <a href="./search.html?subject=Social%20Science" class="dropdown-link"><span>Social Science</span></a>
+            <a href="./subjects.html" class="dropdown-link"><span>Explore All Subjects &rarr;</span></a>
+          </div>
+        </div>
+
+        <a href="./papers.html" class="nav-link">Question Papers</a>
+        <a href="./articles/index.html" class="nav-link">Articles</a>
+
+        <div class="nav-item">
+          <a href="./planner.html" class="nav-link">
+            <span>Study Tools</span>
+            <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" /></svg>
+          </a>
+          <div class="dropdown-menu">
+            <a href="./planner.html" class="dropdown-link"><span>Study Planner</span><span class="dropdown-badge">Tasks</span></a>
+            <a href="./revision.html" class="dropdown-link"><span>Revision Checklist</span><span class="dropdown-badge">Chapters</span></a>
+            <a href="./timer.html" class="dropdown-link"><span>Focus Study Timer</span><span class="dropdown-badge">Pomodoro</span></a>
+            <a href="./compare.html" class="dropdown-link"><span>Resource Comparison</span><span class="dropdown-badge">Side-by-side</span></a>
+            <a href="./saved.html" class="dropdown-link"><span>Saved Bookmarks</span><span class="dropdown-badge">Export</span></a>
+          </div>
+        </div>
+
+        <a href="./about.html" class="nav-link">About</a>
+      </nav>
+
+      <!-- Header Action Buttons -->
+      <div class="header-actions">
+        <a href="./search.html" class="search-trigger-btn" aria-label="Open search page">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+          <span>Search</span>
+          <span class="keyboard-shortcut-key">/</span>
+        </a>
+
+        <a href="./saved.html" class="icon-action-btn" aria-label="View Saved Bookmarks" title="Saved Resources">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path></svg>
+          <span class="icon-action-badge bookmark-count-badge" style="display: none;">0</span>
+        </a>
+
+        <button type="button" class="icon-action-btn theme-toggle-btn" aria-label="Toggle Theme" title="Toggle theme">
+          <span class="theme-icon-container">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+          </span>
+        </button>
+
+        <button type="button" class="mobile-menu-btn" aria-label="Open navigation menu">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Overlay & Menu -->
+  <div class="mobile-drawer-overlay"></div>
+  <aside class="mobile-drawer" aria-label="Mobile Navigation Drawer">
+    <div class="drawer-header">
+      <img src="./assets/icons/logo.svg" alt="StudyHub" width="130" height="32">
+      <button type="button" class="drawer-close-btn icon-action-btn" aria-label="Close navigation menu">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+      </button>
+    </div>
+
+    <div class="drawer-nav-list">
+      <a href="./index.html" class="drawer-link active">Home</a>
+      <a href="./search.html" class="drawer-link">Discovery Search Engine</a>
+      <a href="./classes.html" class="drawer-link">Classes (1–12)</a>
+      <a href="./exams.html" class="drawer-link">Competitive Examinations</a>
+      <a href="./subjects.html" class="drawer-link">Subjects Directory</a>
+      <a href="./papers.html" class="drawer-link">Question Papers & Sample Papers</a>
+      <a href="./articles/index.html" class="drawer-link">Study Guides & Articles</a>
+
+      <div class="drawer-section-heading">Student Productivity Tools</div>
+      <a href="./planner.html" class="drawer-link">Study Planner</a>
+      <a href="./revision.html" class="drawer-link">Revision Checklist</a>
+      <a href="./timer.html" class="drawer-link">Focus Study Timer</a>
+      <a href="./compare.html" class="drawer-link">Compare Resources</a>
+      <a href="./saved.html" class="drawer-link">Saved Resources</a>
+
+      <div class="drawer-section-heading">Information & Disclosures</div>
+      <a href="./about.html" class="drawer-link">About StudyHub</a>
+      <a href="./contact.html" class="drawer-link">Contact & Link Feedback</a>
+      <a href="./disclaimer.html" class="drawer-link">Legal Disclaimer</a>
+      <a href="./privacy.html" class="drawer-link">Privacy Policy</a>
+      <a href="./terms.html" class="drawer-link">Terms of Use</a>
+      <a href="./copyright.html" class="drawer-link">Copyright & Corrections</a>
+    </div>
+  </aside>
+
+  <!-- Main Content -->
+  <main id="mainContent" class="main-content">
+    <!-- Hero Section -->
+    <section class="hero-section">
+      <div class="container hero-content">
+        <div class="hero-pill">
+          <svg width="14" height="14" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+          <span>Curated Index of Verified Educational Portals</span>
+        </div>
+
+        <h1 class="hero-title">Find the study material you need.</h1>
+        <p class="hero-subtitle">
+          Discover textbooks, chapter notes, question papers, and trusted learning resources for school and competitive exams.
+        </p>
+
+        <!-- Working Global Search Form -->
+        <div class="search-form-container">
+          <form action="./search.html" method="GET" class="global-search-form" role="search">
+            <div class="search-input-wrapper">
+              <svg class="search-icon-left" viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clip-rule="evenodd"/>
+              </svg>
+              <input 
+                type="text" 
+                name="q" 
+                class="search-input-main" 
+                placeholder="Search Class 10 Science, NEET Biology, JEE Physics..."
+                autocomplete="off"
+                aria-label="Search study material across classes, exams, subjects, and chapters"
+              >
+              <button type="button" class="search-clear-btn" aria-label="Clear search input">&times;</button>
+              <button type="submit" class="search-submit-btn">Search</button>
+            </div>
+            <!-- Live Suggestions Dropdown -->
+            <div class="search-suggestions-dropdown" role="listbox"></div>
+          </form>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="quick-links-group">
+          <span class="quick-links-label">Quick Links:</span>
+          <a href="./classes.html?range=6-10" class="quick-link-tag">Classes 6–10</a>
+          <a href="./classes.html?range=11-12" class="quick-link-tag">Classes 11–12</a>
+          <a href="./exams.html?exam=NEET" class="quick-link-tag">NEET UG</a>
+          <a href="./exams.html?exam=JEE%20Main" class="quick-link-tag">JEE Main</a>
+          <a href="./exams.html?exam=JEE%20Advanced" class="quick-link-tag">JEE Advanced</a>
+          <a href="./exams.html?exam=CUET" class="quick-link-tag">CUET</a>
+          <a href="./exams.html?exam=Government" class="quick-link-tag">Government Exams</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Browse by Class -->
+    <section class="section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-label">Curriculum Pathways</span>
+          <h2 class="section-title">Browse by Class</h2>
+          <p class="section-description">
+            Access official NCERT digital editions, syllabus documents, and sample assessment papers mapped to your school standard.
+          </p>
+        </div>
+
+        <div class="browse-classes-grid">
+          <a href="./classes.html?class=1" class="class-card-btn"><span class="class-number">1</span><span class="class-label">Class 1</span></a>
+          <a href="./classes.html?class=2" class="class-card-btn"><span class="class-number">2</span><span class="class-label">Class 2</span></a>
+          <a href="./classes.html?class=3" class="class-card-btn"><span class="class-number">3</span><span class="class-label">Class 3</span></a>
+          <a href="./classes.html?class=4" class="class-card-btn"><span class="class-number">4</span><span class="class-label">Class 4</span></a>
+          <a href="./classes.html?class=5" class="class-card-btn"><span class="class-number">5</span><span class="class-label">Class 5</span></a>
+          <a href="./classes.html?class=6" class="class-card-btn"><span class="class-number">6</span><span class="class-label">Class 6</span></a>
+          <a href="./classes.html?class=7" class="class-card-btn"><span class="class-number">7</span><span class="class-label">Class 7</span></a>
+          <a href="./classes.html?class=8" class="class-card-btn"><span class="class-number">8</span><span class="class-label">Class 8</span></a>
+          <a href="./classes.html?class=9" class="class-card-btn"><span class="class-number">9</span><span class="class-label">Class 9</span></a>
+          <a href="./classes.html?class=10" class="class-card-btn" style="border-color: var(--brand-navy); background-color: var(--bg-subtle);">
+            <span class="class-number" style="color: var(--brand-amber-dark);">10</span>
+            <span class="class-label" style="font-weight: 700;">Class 10 Board</span>
+          </a>
+          <a href="./classes.html?class=11" class="class-card-btn"><span class="class-number">11</span><span class="class-label">Class 11</span></a>
+          <a href="./classes.html?class=12" class="class-card-btn" style="border-color: var(--brand-navy); background-color: var(--bg-subtle);">
+            <span class="class-number" style="color: var(--brand-amber-dark);">12</span>
+            <span class="class-label" style="font-weight: 700;">Class 12 Board</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Browse by Examination -->
+    <section class="section section-alt">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-label">National Admissions & Recruitment</span>
+          <h2 class="section-title">Browse by Competitive Examination</h2>
+          <p class="section-description">
+            Direct access to official examination bulletins, previous year question archives, and domain syllabi from central authorities.
+          </p>
+        </div>
+
+        <div class="exam-cards-grid">
+          <a href="./exams.html?exam=NEET" class="exam-card">
+            <div>
+              <div class="exam-card-header">
+                <span class="exam-badge">NTA / Medical</span>
+              </div>
+              <h3 class="exam-card-title">NEET UG</h3>
+              <p class="exam-card-desc">National Eligibility cum Entrance Test for MBBS and BDS admissions across India. NCERT Biology, Chemistry & Physics.</p>
+            </div>
+            <div class="exam-card-footer">
+              <span>Explore NEET Resources</span>
+              <span>&rarr;</span>
+            </div>
+          </a>
+
+          <a href="./exams.html?exam=JEE%20Main" class="exam-card">
+            <div>
+              <div class="exam-card-header">
+                <span class="exam-badge">NTA / Engineering</span>
+              </div>
+              <h3 class="exam-card-title">JEE Main</h3>
+              <p class="exam-card-desc">Joint Entrance Examination for admissions into NITs, IIITs, and CFTIs with official shift-wise question banks.</p>
+            </div>
+            <div class="exam-card-footer">
+              <span>Explore JEE Main Resources</span>
+              <span>&rarr;</span>
+            </div>
+          </a>
+
+          <a href="./exams.html?exam=JEE%20Advanced" class="exam-card">
+            <div>
+              <div class="exam-card-header">
+                <span class="exam-badge">IITs / Advanced STEM</span>
+              </div>
+              <h3 class="exam-card-title">JEE Advanced</h3>
+              <p class="exam-card-desc">Official question paper archive for Paper 1 and Paper 2 with official answer keys curated by organizing IITs.</p>
+            </div>
+            <div class="exam-card-footer">
+              <span>Explore JEE Advanced</span>
+              <span>&rarr;</span>
+            </div>
+          </a>
+
+          <a href="./exams.html?exam=CUET" class="exam-card">
+            <div>
+              <div class="exam-card-header">
+                <span class="exam-badge">NTA / Central Universities</span>
+              </div>
+              <h3 class="exam-card-title">CUET (UG)</h3>
+              <p class="exam-card-desc">Common University Entrance Test for undergraduate admissions in Central and Participating State Universities.</p>
+            </div>
+            <div class="exam-card-footer">
+              <span>Explore CUET Resources</span>
+              <span>&rarr;</span>
+            </div>
+          </a>
+
+          <a href="./exams.html?exam=UPSC" class="exam-card">
+            <div>
+              <div class="exam-card-header">
+                <span class="exam-badge">UPSC / Civil Services</span>
+              </div>
+              <h3 class="exam-card-title">UPSC CSE</h3>
+              <p class="exam-card-desc">Official UPSC Prelims (GS-1 & CSAT) and Mains (GS I to IV & Essay) papers with authentic syllabus blueprints.</p>
+            </div>
+            <div class="exam-card-footer">
+              <span>Explore UPSC Resources</span>
+              <span>&rarr;</span>
+            </div>
+          </a>
+
+          <a href="./exams.html?exam=SSC" class="exam-card">
+            <div>
+              <div class="exam-card-header">
+                <span class="exam-badge">Government Staff Recruitment</span>
+              </div>
+              <h3 class="exam-card-title">SSC & Railways</h3>
+              <p class="exam-card-desc">Staff Selection Commission CGL and Railway Recruitment Board (RRB NTPC) notifications and exam patterns.</p>
+            </div>
+            <div class="exam-card-footer">
+              <span>Explore SSC / RRB Resources</span>
+              <span>&rarr;</span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Browse by Subject -->
+    <section class="section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-label">Core Disciplines</span>
+          <h2 class="section-title">Browse by Subject</h2>
+          <p class="section-description">
+            Explore dedicated textbook sections, exemplar problem collections, and chapter breakdowns across foundational subjects.
+          </p>
+        </div>
+
+        <div class="subjects-pills-grid">
+          <a href="./search.html?subject=Mathematics" class="subject-pill-card">
+            <div class="subject-icon-box">📐</div>
+            <span class="subject-name">Mathematics</span>
+          </a>
+          <a href="./search.html?subject=Science" class="subject-pill-card">
+            <div class="subject-icon-box">🔬</div>
+            <span class="subject-name">Science</span>
+          </a>
+          <a href="./search.html?subject=Physics" class="subject-pill-card">
+            <div class="subject-icon-box">⚡</div>
+            <span class="subject-name">Physics</span>
+          </a>
+          <a href="./search.html?subject=Chemistry" class="subject-pill-card">
+            <div class="subject-icon-box">🧪</div>
+            <span class="subject-name">Chemistry</span>
+          </a>
+          <a href="./search.html?subject=Biology" class="subject-pill-card">
+            <div class="subject-icon-box">🧬</div>
+            <span class="subject-name">Biology</span>
+          </a>
+          <a href="./search.html?subject=Social%20Science" class="subject-pill-card">
+            <div class="subject-icon-box">🌍</div>
+            <span class="subject-name">Social Science</span>
+          </a>
+          <a href="./search.html?subject=History" class="subject-pill-card">
+            <div class="subject-icon-box">🏛️</div>
+            <span class="subject-name">History</span>
+          </a>
+          <a href="./search.html?subject=Geography" class="subject-pill-card">
+            <div class="subject-icon-box">🗺️</div>
+            <span class="subject-name">Geography</span>
+          </a>
+          <a href="./search.html?subject=Political%20Science" class="subject-pill-card">
+            <div class="subject-icon-box">⚖️</div>
+            <span class="subject-name">Political Science</span>
+          </a>
+          <a href="./search.html?subject=Economics" class="subject-pill-card">
+            <div class="subject-icon-box">📊</div>
+            <span class="subject-name">Economics</span>
+          </a>
+          <a href="./search.html?subject=English" class="subject-pill-card">
+            <div class="subject-icon-box">📖</div>
+            <span class="subject-name">English</span>
+          </a>
+          <a href="./search.html?subject=Computer%20Science" class="subject-pill-card">
+            <div class="subject-icon-box">💻</div>
+            <span class="subject-name">Computer Science</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured Resources (Real Catalog Data) -->
+    <section class="section section-alt">
+      <div class="container">
+        <div class="section-header" style="display: flex; align-items: flex-end; justify-content: space-between; flex-wrap: wrap; gap: 1rem;">
+          <div>
+            <span class="section-label">Editorial Selections</span>
+            <h2 class="section-title">Featured Educational Resources</h2>
+            <p class="section-description">
+              Hand-verified curriculum essentials from NCERT, CBSE, NTA, and official commissions.
+            </p>
+          </div>
+          <a href="./search.html" class="open-resource-btn" style="background-color: transparent; border: 1px solid var(--border-default); color: var(--text-main);">
+            View Full Catalog &rarr;
+          </a>
+        </div>
+
+        <div id="featuredResourcesContainer" class="resources-list">
+          <!-- Dynamically populated from data/resources.json -->
+          <div class="empty-state-card">
+            <p>Loading curated catalog entries...</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Educational Articles Preview -->
+    <section class="section">
+      <div class="container">
+        <div class="section-header" style="display: flex; align-items: flex-end; justify-content: space-between; flex-wrap: wrap; gap: 1rem;">
+          <div>
+            <span class="section-label">Preparation Methodology</span>
+            <h2 class="section-title">Study Guides & Strategies</h2>
+            <p class="section-description">
+              Evidence-based techniques for active note-making, timetable architecture, NCERT revision, and question analysis.
+            </p>
+          </div>
+          <a href="./articles/index.html" class="open-resource-btn" style="background-color: transparent; border: 1px solid var(--border-default); color: var(--text-main);">
+            Browse All 10 Articles &rarr;
+          </a>
+        </div>
+
+        <div class="exam-cards-grid">
+          <a href="./articles/effective-study-notes.html" class="exam-card">
+            <div>
+              <div class="exam-card-header"><span class="exam-badge">Study Strategy</span></div>
+              <h3 class="exam-card-title">How to Make Effective Study Notes</h3>
+              <p class="exam-card-desc">Moving beyond mechanical copying: syllabus mapping, the Cornell method, visual schematics, and concise formula indices.</p>
+            </div>
+            <div class="exam-card-footer">
+              <span>Read Guide (7 min read)</span>
+              <span>&rarr;</span>
+            </div>
+          </a>
+
+          <a href="./articles/class-10-board-preparation.html" class="exam-card">
+            <div>
+              <div class="exam-card-header"><span class="exam-badge">Board Exams</span></div>
+              <h3 class="exam-card-title">How to Prepare for Class 10 Board Exams</h3>
+              <p class="exam-card-desc">A systematic blueprint for CBSE and State Board candidates: textbook mastery, competency questions, and sample paper timing.</p>
+            </div>
+            <div class="exam-card-footer">
+              <span>Read Guide (9 min read)</span>
+              <span>&rarr;</span>
+            </div>
+          </a>
+
+          <a href="./articles/neet-biology-revision.html" class="exam-card">
+            <div>
+              <div class="exam-card-header"><span class="exam-badge">Medical Entrance</span></div>
+              <h3 class="exam-card-title">NEET Preparation: Organizing Biology Revision</h3>
+              <p class="exam-card-desc">Why NCERT Biology accounts for 360 marks, reading between the lines, diagram mapping, and eliminating negative marking.</p>
+            </div>
+            <div class="exam-card-footer">
+              <span>Read Guide (8 min read)</span>
+              <span>&rarr;</span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Platform Explanation & Verification Standards -->
+    <section class="section section-alt">
+      <div class="container">
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center;">
+          <div>
+            <span class="section-label">How StudyHub Works</span>
+            <h2 class="section-title" style="margin-bottom: 1rem;">An Independent Discovery Index Built for Students</h2>
+            <p style="color: var(--text-muted); line-height: 1.65; margin-bottom: 1rem;">
+              StudyHub acts as an open index for learning materials produced by government examination boards, national educational councils, and authorized open repositories. 
+            </p>
+            <ul style="display: flex; flex-direction: column; gap: 0.75rem; color: var(--text-main); font-size: 0.95rem;">
+              <li style="display: flex; align-items: flex-start; gap: 0.5rem;">
+                <span style="color: var(--brand-amber-dark); font-weight: 700;">✓</span>
+                <span><strong>No Account or Sign-Up Required:</strong> All features work immediately in your browser without logging in.</span>
+              </li>
+              <li style="display: flex; align-items: flex-start; gap: 0.5rem;">
+                <span style="color: var(--brand-amber-dark); font-weight: 700;">✓</span>
+                <span><strong>Direct Official Links:</strong> Resources open directly on original domains such as NCERT, CBSE Academic, or NTA.</span>
+              </li>
+              <li style="display: flex; align-items: flex-start; gap: 0.5rem;">
+                <span style="color: var(--brand-amber-dark); font-weight: 700;">✓</span>
+                <span><strong>Local Browser Privacy:</strong> Bookmarks, tasks, and revision checklists remain strictly on your personal device.</span>
+              </li>
+            </ul>
+          </div>
+
+          <div style="background-color: var(--bg-surface); border: 1px solid var(--border-default); border-radius: var(--radius-md); padding: 1.75rem;">
+            <h3 style="font-size: 1.15rem; font-weight: 700; color: var(--brand-navy); margin-bottom: 0.75rem;">
+              Resource Verification & Transparency Notice
+            </h3>
+            <p style="font-size: 0.875rem; color: var(--text-muted); line-height: 1.6; margin-bottom: 1rem;">
+              Every indexed resource undergoes manual verification where we record the original publisher, license status, and verified link target. We do not rehost copyrighted PDFs without authorization.
+            </p>
+            <div style="background-color: var(--bg-subtle); border-left: 3px solid var(--brand-amber); padding: 0.75rem 1rem; font-size: 0.8125rem; color: var(--text-subtle); line-height: 1.5; margin-bottom: 1rem;">
+              <strong>Important Notice:</strong> StudyHub is an independent discovery platform and is not affiliated with NCERT, CBSE, NTA, or UPSC. Official examination schedules and notifications should always be cross-checked on respective official portals.
+            </div>
+            <a href="./disclaimer.html" style="font-size: 0.875rem; font-weight: 600; color: var(--brand-blue-muted); text-decoration: underline;">
+              Read our full Verification & Legal Disclaimer &rarr;
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-top-grid">
+        <div class="footer-brand-col">
+          <a href="./index.html" aria-label="StudyHub Homepage">
+            <img src="./assets/icons/logo.svg" alt="StudyHub" width="160" height="40">
+          </a>
+          <p>
+            An independent educational resource discovery platform for Indian school and competitive exam students. Find original textbooks, question papers, and official syllabus blueprints.
+          </p>
+        </div>
+
+        <div>
+          <h4 class="footer-heading">Class Portals</h4>
+          <ul class="footer-links-list">
+            <li><a href="./classes.html?class=10" class="footer-link">Class 10 CBSE / ICSE</a></li>
+            <li><a href="./classes.html?class=12" class="footer-link">Class 12 Boards</a></li>
+            <li><a href="./classes.html?class=9" class="footer-link">Class 9 Foundation</a></li>
+            <li><a href="./classes.html?class=11" class="footer-link">Class 11 Senior</a></li>
+            <li><a href="./classes.html" class="footer-link">All Classes (1 to 12)</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-heading">Competitive Exams</h4>
+          <ul class="footer-links-list">
+            <li><a href="./exams.html?exam=NEET" class="footer-link">NEET UG Medical</a></li>
+            <li><a href="./exams.html?exam=JEE%20Main" class="footer-link">JEE Main Engineering</a></li>
+            <li><a href="./exams.html?exam=JEE%20Advanced" class="footer-link">JEE Advanced (IIT)</a></li>
+            <li><a href="./exams.html?exam=CUET" class="footer-link">CUET (UG)</a></li>
+            <li><a href="./exams.html?exam=UPSC" class="footer-link">UPSC Civil Services</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-heading">Study Tools</h4>
+          <ul class="footer-links-list">
+            <li><a href="./planner.html" class="footer-link">Study Planner</a></li>
+            <li><a href="./revision.html" class="footer-link">Revision Checklist</a></li>
+            <li><a href="./timer.html" class="footer-link">Focus Study Timer</a></li>
+            <li><a href="./compare.html" class="footer-link">Compare Resources</a></li>
+            <li><a href="./saved.html" class="footer-link">Saved Resources</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-heading">Institutional & Legal</h4>
+          <ul class="footer-links-list">
+            <li><a href="./about.html" class="footer-link">About StudyHub</a></li>
+            <li><a href="./contact.html" class="footer-link">Contact & Link Feedback</a></li>
+            <li><a href="./disclaimer.html" class="footer-link">Legal Disclaimer</a></li>
+            <li><a href="./privacy.html" class="footer-link">Privacy Policy</a></li>
+            <li><a href="./terms.html" class="footer-link">Terms of Use</a></li>
+            <li><a href="./copyright.html" class="footer-link">Copyright & Corrections</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-disclaimer-card">
+        <strong>Non-Affiliation Notice:</strong> StudyHub is an independent educational platform. All third-party trademarks, government seals, and logos belong to their respective statutory owners (such as NCERT, CBSE, NTA, CISCE, and UPSC). Links are indexed strictly for public educational discovery and fair convenience.
+      </div>
+
+      <div class="footer-bottom-bar">
+        <div>
+          &copy; <span id="currentYear">2026</span> StudyHub. Designed for open, accessible education.
+        </div>
+        <div>
+          No tracking cookies • Local browser storage • Free static hosting ready
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="./assets/js/storage.js"></script>
+  <script src="./assets/js/catalog.js"></script>
+  <script src="./assets/js/search.js"></script>
+  <script src="./assets/js/ui.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', async () => {
+      document.getElementById('currentYear').textContent = new Date().getFullYear();
+      await StudyHubCatalog.init();
+
+      // Render featured items on homepage
+      const featuredContainer = document.getElementById('featuredResourcesContainer');
+      if (featuredContainer) {
+        const featured = StudyHubCatalog.getFeatured(4);
+        if (featured.length > 0) {
+          featuredContainer.innerHTML = '';
+          featured.forEach(r => {
+            featuredContainer.appendChild(StudyHubUI.renderResourceCard(r));
+          });
+        }
+      }
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us & Report Link Corrections — StudyHub</title>
+  <meta name="description" content="Get in touch with the StudyHub catalog team to report broken links, suggest corrections, submit copyright notices, or provide general feedback.">
+  <link rel="canonical" href="https://studyhub.local/contact.html">
+
+  <link rel="icon" type="image/svg+xml" href="./favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/icons/favicon-32x32.png">
+  <link rel="manifest" href="./site.webmanifest">
+  <meta name="theme-color" content="#0f2942">
+
+  <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body>
+  <a href="#mainContent" class="skip-link">Skip to main content</a>
+
+  <!-- Header -->
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <a href="./index.html" class="brand-logo-link" aria-label="StudyHub Homepage">
+        <img src="./assets/icons/logo.svg" alt="StudyHub" class="brand-logo-svg" width="160" height="40">
+      </a>
+      <nav class="nav-desktop" aria-label="Main Navigation">
+        <a href="./classes.html" class="nav-link">Browse Classes</a>
+        <a href="./exams.html" class="nav-link">Competitive Exams</a>
+        <a href="./subjects.html" class="nav-link">Subjects</a>
+        <a href="./papers.html" class="nav-link">Question Papers</a>
+        <a href="./articles/index.html" class="nav-link">Articles</a>
+        <a href="./planner.html" class="nav-link">Study Tools</a>
+        <a href="./about.html" class="nav-link">About</a>
+      </nav>
+      <div class="header-actions">
+        <a href="./search.html" class="search-trigger-btn"><span>Search</span></a>
+        <button type="button" class="icon-action-btn theme-toggle-btn" aria-label="Toggle Theme">
+          <span class="theme-icon-container">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+          </span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Breadcrumbs -->
+  <div class="breadcrumbs-bar">
+    <div class="container">
+      <nav aria-label="Breadcrumb">
+        <ol class="breadcrumb-list">
+          <li class="breadcrumb-item"><a href="./index.html">Home</a></li>
+          <li class="breadcrumb-item" aria-current="page"><span>Contact & Link Feedback</span></li>
+        </ol>
+      </nav>
+    </div>
+  </div>
+
+  <main id="mainContent" class="main-content" style="padding-top: 3rem; padding-bottom: 4rem;">
+    <div class="container-narrow">
+      <div class="section-header">
+        <span class="section-label">Editorial Inquiries & Corrections</span>
+        <h1 class="section-title">Contact & Link Feedback</h1>
+        <p class="section-description">
+          Help us keep the StudyHub educational catalog accurate. Report broken external links, suggest corrections, or submit feedback directly to our curation desk.
+        </p>
+      </div>
+
+      <!-- Static Architecture Notice -->
+      <div class="article-callout" style="margin-bottom: 2rem;">
+        <div class="article-callout-title">Direct Client-Side Communication Notice</div>
+        <p style="font-size: 0.875rem; margin-bottom: 0.5rem;">
+          StudyHub is a privacy-first, static website without server-side database storage. Submitting this form prepares your message directly inside your device's native email client (Gmail, Apple Mail, Outlook), or you can use the "Copy Message to Clipboard" button to paste it into any webmail.
+        </p>
+        <p style="font-size: 0.875rem; margin-bottom: 0;">
+          Direct Email Address: <a href="mailto:contact@studyhub.local" style="font-weight: 700; text-decoration: underline;">contact@studyhub.local</a>
+        </p>
+      </div>
+
+      <!-- Feedback Form Card -->
+      <div style="background: var(--bg-surface); border: 1px solid var(--border-default); border-radius: var(--radius-md); padding: 2rem;">
+        <div id="contactErrorAlert" style="display: none; background: #fef2f2; border: 1px solid #fecaca; color: #b91c1c; padding: 0.85rem; border-radius: var(--radius-sm); margin-bottom: 1.5rem; font-size: 0.875rem;"></div>
+
+        <div id="contactNoticeAlert" style="display: none; background: #ecfdf5; border: 1px solid #a7f3d0; color: #065f46; padding: 0.85rem; border-radius: var(--radius-sm); margin-bottom: 1.5rem; font-size: 0.875rem;">
+          ✓ Message prepared! Your native email application has been launched with the recipient, subject, and text pre-filled. Please click "Send" in your email client to complete delivery.
+        </div>
+
+        <form id="contactForm">
+          <div class="form-group">
+            <label for="contactName" class="form-label">Your Name</label>
+            <input type="text" id="contactName" class="form-control" placeholder="Enter your full name" required>
+          </div>
+
+          <div class="form-group">
+            <label for="contactEmail" class="form-label">Your Email Address</label>
+            <input type="email" id="contactEmail" class="form-control" placeholder="e.g. yourname@example.com" required>
+          </div>
+
+          <div class="form-group">
+            <label for="contactCategory" class="form-label">Inquiry Category</label>
+            <select id="contactCategory" class="form-control">
+              <option value="Broken Link Report">Report Broken or Changed Link</option>
+              <option value="Incorrect Metadata">Incorrect Chapter / Subject Metadata</option>
+              <option value="New Resource Suggestion">Suggest a Verified Official Resource</option>
+              <option value="Copyright Concern">Copyright or Attribution Concern</option>
+              <option value="General Feedback">General Feedback & Suggestions</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="contactSubject" class="form-label">Subject</label>
+            <input type="text" id="contactSubject" class="form-control" placeholder="Brief summary of your inquiry..." required>
+          </div>
+
+          <div class="form-group">
+            <label for="contactMessage" class="form-label">Message Details</label>
+            <textarea id="contactMessage" class="form-control" rows="5" placeholder="Please provide specific URLs, resource titles, and details to help us investigate..." required></textarea>
+          </div>
+
+          <div style="display: flex; gap: 0.75rem; flex-wrap: wrap;">
+            <button type="submit" class="open-resource-btn" style="padding: 0.75rem 1.5rem; font-size: 0.95rem;">
+              Open in Email App &rarr;
+            </button>
+            <button type="button" id="copyMessageBtn" class="open-resource-btn" style="background: transparent; border: 1px solid var(--border-default); color: var(--text-main); font-size: 0.95rem;">
+              Copy Message to Clipboard
+            </button>
+          </div>
+        </form>
+      </div>
+
+      <div style="margin-top: 2.5rem; font-size: 0.875rem; color: var(--text-muted); line-height: 1.6;">
+        <strong>Response Timeline:</strong> Because StudyHub is operated by an independent educational editorial group, link verification updates are processed in batch cycles twice a week. We appreciate your assistance in keeping links reliable for Indian students nationwide.
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-bottom-bar">
+        <div>&copy; <span id="currentYear">2026</span> StudyHub. Dedicated to open, accessible learning.</div>
+        <div><a href="./disclaimer.html" class="footer-link">Legal Disclaimer</a> • <a href="./privacy.html" class="footer-link">Privacy Policy</a></div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="./assets/js/storage.js"></script>
+  <script src="./assets/js/ui.js"></script>
+  <script src="./assets/js/contact.js"></script>
+  <script>
+    document.getElementById('currentYear').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

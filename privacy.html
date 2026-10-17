@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy — Data Handling & Local Storage Transparency — StudyHub</title>
+  <meta name="description" content="Transparent privacy policy explaining client-side local storage, zero accounts, no tracking cookies, external font assets, and external link navigation.">
+  <link rel="canonical" href="https://studyhub.local/privacy.html">
+
+  <link rel="icon" type="image/svg+xml" href="./favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/icons/favicon-32x32.png">
+  <link rel="manifest" href="./site.webmanifest">
+  <meta name="theme-color" content="#0f2942">
+
+  <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body>
+  <a href="#mainContent" class="skip-link">Skip to main content</a>
+
+  <!-- Header -->
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <a href="./index.html" class="brand-logo-link" aria-label="StudyHub Homepage">
+        <img src="./assets/icons/logo.svg" alt="StudyHub" class="brand-logo-svg" width="160" height="40">
+      </a>
+      <nav class="nav-desktop" aria-label="Main Navigation">
+        <a href="./classes.html" class="nav-link">Browse Classes</a>
+        <a href="./exams.html" class="nav-link">Competitive Exams</a>
+        <a href="./subjects.html" class="nav-link">Subjects</a>
+        <a href="./papers.html" class="nav-link">Question Papers</a>
+        <a href="./articles/index.html" class="nav-link">Articles</a>
+        <a href="./planner.html" class="nav-link">Study Tools</a>
+        <a href="./about.html" class="nav-link">About</a>
+      </nav>
+      <div class="header-actions">
+        <a href="./search.html" class="search-trigger-btn"><span>Search</span></a>
+        <button type="button" class="icon-action-btn theme-toggle-btn" aria-label="Toggle Theme">
+          <span class="theme-icon-container">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+          </span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="breadcrumbs-bar">
+    <div class="container">
+      <nav aria-label="Breadcrumb">
+        <ol class="breadcrumb-list">
+          <li class="breadcrumb-item"><a href="./index.html">Home</a></li>
+          <li class="breadcrumb-item" aria-current="page"><span>Privacy Policy</span></li>
+        </ol>
+      </nav>
+    </div>
+  </div>
+
+  <main id="mainContent" class="main-content" style="padding-top: 3rem; padding-bottom: 4rem;">
+    <div class="container-narrow">
+      <div class="section-header">
+        <span class="section-label">Data Privacy Standards</span>
+        <h1 class="section-title">Privacy Policy</h1>
+        <p class="section-description">
+          An honest, transparent explanation of how data is handled when you use StudyHub.
+        </p>
+      </div>
+
+      <div class="article-content">
+        <h2>1. No User Accounts or Server-Side Database</h2>
+        <p>
+          StudyHub is built as a static frontend website. We do not operate user registration systems, logins, password databases, or server-side user profiles. You can search, browse, bookmark, and organize study plans without ever providing personal credentials or identity information.
+        </p>
+
+        <h2>2. How LocalStorage is Used on Your Device</h2>
+        <p>
+          To make study tools useful across repeat visits without requiring a database, StudyHub utilizes your browser's built-in <strong>Web Storage API (LocalStorage)</strong>:
+        </p>
+        <ul>
+          <li><strong>Bookmarks:</strong> The resource IDs of items you save are stored under the key <code>studyhub_bookmarks_v1</code>.</li>
+          <li><strong>Recently Viewed:</strong> The resource IDs of original links you clicked are stored under <code>studyhub_recent_v1</code> so you can easily return to them.</li>
+          <li><strong>Study Planner:</strong> Your tasks, due dates, and completed checkboxes are stored under <code>studyhub_planner_v1</code>.</li>
+          <li><strong>Revision Checklists:</strong> Chapter completion statuses (e.g., in progress, completed) are stored under <code>studyhub_checklists_v1</code>.</li>
+          <li><strong>Theme Preference:</strong> Your selected light or dark mode setting is stored under <code>studyhub_theme_v1</code>.</li>
+        </ul>
+        <p>
+          This data exists strictly inside your current browser sandbox on your device. It is never transmitted, synced, or backed up to any StudyHub server. You can delete this data at any time by clearing your browser cache and cookies.
+        </p>
+
+        <h2>3. Third-Party Web Fonts (Google Fonts)</h2>
+        <p>
+          To maintain typographic clarity across operating systems, StudyHub requests web fonts (Inter and Source Serif 4) from Google Fonts servers (<code>fonts.googleapis.com</code> and <code>fonts.gstatic.com</code>). When your browser requests these font files, your device's IP address and standard HTTP request headers are received by Google in accordance with Google's public font privacy documentation.
+        </p>
+
+        <h2>4. External Hyperlinks</h2>
+        <p>
+          StudyHub provides direct links to external websites, including government portals (e.g., <code>ncert.nic.in</code>, <code>cbseacademic.nic.in</code>, <code>nta.ac.in</code>) and open educational repositories. Once you click an external link, you leave StudyHub. External websites maintain their own independent terms of service, server logging practices, and cookie policies over which StudyHub has no control.
+        </p>
+
+        <h2>5. Contact Forms & Email Communications</h2>
+        <p>
+          When you submit an inquiry through our <a href="./contact.html">Contact Form</a>, our website does not send the data to a private server. Instead, it prepares a message directly in your device's default email client via a standard <code>mailto:</code> protocol, or lets you copy the text to your clipboard. Any information you subsequently send via email is governed by your email service provider.
+        </p>
+
+        <h2>6. No Commercial Advertising or Tracking Pixels</h2>
+        <p>
+          StudyHub does not run behavioral advertising networks, retargeting pixels (such as Meta Pixel), commercial tracking cookies, or fingerprinting scripts.
+        </p>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-bottom-bar">
+        <div>&copy; <span id="currentYear">2026</span> StudyHub. Dedicated to open, accessible learning.</div>
+        <div><a href="./disclaimer.html" class="footer-link">Legal Disclaimer</a> • <a href="./terms.html" class="footer-link">Terms of Use</a></div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="./assets/js/storage.js"></script>
+  <script src="./assets/js/ui.js"></script>
+  <script>
+    document.getElementById('currentYear').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
